@@ -1,0 +1,13 @@
+{
+  "name": "js-warmup",
+  "version": "1.0.0",
+  "description": "Module 1 JavaScript warm-up starter code",
+  "private": true,
+  "scripts": {
+    "start": "serve ."
+  },
+  "devDependencies": {
+    "serve": "^14.2.1",
+    "typescript": "^7.0.2"
+  }
+}

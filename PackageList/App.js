@@ -27,7 +27,6 @@ function AppContent() {
       ...currentPackingItems,
       { id: Math.random().toString(), text: enteredPackingText },
     ]);
-    console.log(packingItems);
   }
 
   function deletePackingItemHandler(id) {

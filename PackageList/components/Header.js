@@ -15,6 +15,9 @@ const styles = StyleSheet.create({
     backgroundColor: "#526A8F",
     padding: 20,
     paddingVertical: 60,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
   },
 
   headerText: {

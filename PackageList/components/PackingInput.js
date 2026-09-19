@@ -40,6 +40,7 @@ function PackingInput(props) {
       <TextInput
         style={styles.textInput}
         placeholder="My packing items"
+        placeholderTextColor={theme.placeholder}
         onChangeText={packingInputHandler}
         value={enteredPackingText}
       />

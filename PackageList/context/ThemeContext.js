@@ -9,12 +9,14 @@ const lightTheme = {
   background: "#ffffff",
   text: "#000000",
   card: "#eeeeee",
+  placeholder: "#6B7280",
 };
 
 const darkTheme = {
   background: "#121212",
   text: "#ffffff",
   card: "#222222",
+  placeholder: "#9CA3AF",
 };
 
 export const ThemeProvider = ({ children }) => {

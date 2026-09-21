@@ -8,14 +8,14 @@ const ThemeContext = createContext({
 const lightTheme = {
   background: "#ffffff",
   text: "#000000",
-  card: "#eeeeee",
+  card: "#F2F4F7",
   placeholder: "#6B7280",
 };
 
 const darkTheme = {
   background: "#121212",
   text: "#ffffff",
-  card: "#222222",
+  card: "#1E252E",
   placeholder: "#9CA3AF",
 };
 

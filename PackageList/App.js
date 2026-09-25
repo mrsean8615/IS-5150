@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FlatList, StyleSheet, View, Text } from "react-native";
+import { FlatList, StyleSheet, View, Text, Pressable } from "react-native";
 
 // Components
 import PackingItem from "./components/PackingItem";
@@ -20,6 +20,7 @@ export default function App() {
 // needed to wrap the content for the context to work properly
 function AppContent() {
   const [packingItems, setPackingItems] = useState([]);
+  const [modalIsVisible, setModalIsVisible] = useState(false);
   const { theme } = useTheme();
 
   function addPackingItemHandler(enteredPackingText) {
@@ -44,7 +45,17 @@ function AppContent() {
     >
       <Header />
       <View style={styles.appContainer}>
-        <PackingInput onAddPackingItem={addPackingItemHandler} />
+        <Pressable
+          style={styles.addItemButton}
+          onPress={() => setModalIsVisible(true)}
+        >
+          <Text style={styles.addItemButtonText}>Add Item</Text>
+        </Pressable>
+        <PackingInput
+          visible={modalIsVisible}
+          onCancel={() => setModalIsVisible(false)}
+          onAddPackingItem={addPackingItemHandler}
+        />
         <View style={styles.packingContainer}>
           {packingItems.length === 0 ? (
             <Text style={{ color: theme.text }}>
@@ -82,5 +93,18 @@ const styles = StyleSheet.create({
   packingContainer: {
     flex: 5,
     padding: 5,
+  },
+  addItemButton: {
+    backgroundColor: "#D9A441",
+    color: "#ffffff",
+    padding: 10,
+    borderRadius: 5,
+    alignItems: "center",
+    marginBottom: 10,
+    marginTop: 10,
+  },
+  addItemButtonText: {
+    color: "#ffffff",
+    fontWeight: "bold",
   },
 });
